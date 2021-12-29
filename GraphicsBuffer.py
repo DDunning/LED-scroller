@@ -15,7 +15,7 @@ class Buffer(NeoPixel.NeoPixel):
             self.pixels_set(offset, colour)
 
     def plotGlyph(self, leftX, topY, colour, glyph):
-        for y in range(0, 10):
+        for y in range(0, 11):
             for x in range(0, 8):
                 isLit = (glyph[y] << x) & 0x80
                 if isLit:

@@ -31,20 +31,30 @@ if __name__=='__main__':
     # 0x01_00_00_00 = (nothing)
     #strip.pixels_raw(0x01000000)
 
-    for leftEdge in range(40):
+    while True:
+        for leftEdge in range(136):
+            strip.pixels_fill(strip.BLACK)
+            strip.plotGlyph(16                     - leftEdge, -1, strip.RED, font.M)
+            strip.plotGlyph(16 + font.Width        - leftEdge, -1, strip.RED, font.e)
+            strip.plotGlyph(16 + (font.Width *  2) - leftEdge, -1, strip.RED, font.r)
+            strip.plotGlyph(16 + (font.Width *  3) - leftEdge, -1, strip.RED, font.r)
+            strip.plotGlyph(16 + (font.Width *  4) - leftEdge, -1, strip.RED, font.y)
+
+            strip.plotGlyph(16 + (font.Width *  6) - leftEdge, -1, strip.GREEN, font.C)
+            strip.plotGlyph(16 + (font.Width *  7) - leftEdge, -1, strip.GREEN, font.h)
+            strip.plotGlyph(16 + (font.Width *  8) - leftEdge, -1, strip.GREEN, font.r)
+            strip.plotGlyph(16 + (font.Width *  9) - leftEdge, -1, strip.GREEN, font.i)
+            strip.plotGlyph(16 + (font.Width * 10) - leftEdge, -1, strip.GREEN, font.s)
+            strip.plotGlyph(16 + (font.Width * 11) - leftEdge, -1, strip.GREEN, font.t)
+            strip.plotGlyph(16 + (font.Width * 12) - leftEdge, -1, strip.GREEN, font.m)
+            strip.plotGlyph(16 + (font.Width * 13) - leftEdge, -1, strip.GREEN, font.a)
+            strip.plotGlyph(16 + (font.Width * 14) - leftEdge, -1, strip.GREEN, font.s)
+
+            strip.pixels_show()
+            #time.sleep(0.005)
+        #dummy = input('Press Enter to continue..')
         strip.pixels_fill(strip.BLACK)
-        strip.plotGlyph(8 - leftEdge, 0, strip.GREEN, font.H())
-        strip.plotGlyph(8 + font.Width - leftEdge, 0, strip.RED, font.e())
-        strip.plotGlyph(8 + (font.Width * 2) - leftEdge, 0, strip.GREEN, font.l())
-        strip.plotGlyph(8 + (font.Width * 3) - leftEdge, 0, strip.RED, font.l())
-        strip.plotGlyph(8 + (font.Width * 4) - leftEdge, 0, strip.GREEN, font.o)
         strip.pixels_show()
-        time.sleep(0.01)
-
-    dummy = input('Press Enter to continue..')
-    strip.pixels_fill(strip.BLACK)
-    strip.pixels_show()
-
 
     print('Done.')
     sys.exit(0)
