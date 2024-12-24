@@ -32,7 +32,7 @@ if __name__=='__main__':
     #strip.pixels_raw(0x01000000)
 
     while True:
-        for leftEdge in range(130):
+        for leftEdge in range(150):
             strip.pixels_fill(strip.BLACK)
             #strip.plotGlyph(16                     - leftEdge, -1, strip.CYAN, font.H)
             #strip.plotGlyph(16 + font.Width        - leftEdge, -1, strip.CYAN, font.a)
@@ -55,15 +55,15 @@ if __name__=='__main__':
             strip.plotGlyph(16 + (font.Width *  4) - leftEdge, -1, strip.RED, font.r)
             strip.plotGlyph(16 + (font.Width *  5) - leftEdge, -1, strip.RED, font.y)
 
-            strip.plotGlyph(16 + (font.Width *  7) - leftEdge, -1, strip.RED, font.C)
-            strip.plotGlyph(16 + (font.Width *  8) - leftEdge, -1, strip.RED, font.h)
-            strip.plotGlyph(16 + (font.Width *  9) - leftEdge, -1, strip.RED, font.r)
-            strip.plotGlyph(16 + (font.Width * 10) - leftEdge, -1, strip.RED, font.i)
-            strip.plotGlyph(16 + (font.Width * 11) - leftEdge, -1, strip.RED, font.s)
-            strip.plotGlyph(16 + (font.Width * 12) - leftEdge, -1, strip.RED, font.t)
-            strip.plotGlyph(16 + (font.Width * 13) - leftEdge, -1, strip.RED, font.m)
-            strip.plotGlyph(16 + (font.Width * 14) - leftEdge, -1, strip.RED, font.a)
-            strip.plotGlyph(16 + (font.Width * 15) - leftEdge, -1, strip.RED, font.s)
+            strip.plotGlyph(16 + (font.Width *  7) - leftEdge, -1, strip.GREEN, font.C)
+            strip.plotGlyph(16 + (font.Width *  8) - leftEdge, -1, strip.GREEN, font.h)
+            strip.plotGlyph(16 + (font.Width *  9) - leftEdge, -1, strip.GREEN, font.r)
+            strip.plotGlyph(16 + (font.Width * 10) - leftEdge, -1, strip.GREEN, font.i)
+            strip.plotGlyph(16 + (font.Width * 11) - leftEdge, -1, strip.GREEN, font.s)
+            strip.plotGlyph(16 + (font.Width * 12) - leftEdge, -1, strip.GREEN, font.t)
+            strip.plotGlyph(16 + (font.Width * 13) - leftEdge, -1, strip.GREEN, font.m)
+            strip.plotGlyph(16 + (font.Width * 14) - leftEdge, -1, strip.GREEN, font.a)
+            strip.plotGlyph(16 + (font.Width * 15) - leftEdge, -1, strip.GREEN, font.s)
             
             strip.pixels_show()
             #time.sleep(0.005)
